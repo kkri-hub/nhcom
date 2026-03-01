@@ -1,0 +1,577 @@
+/* ================================================================
+   RESET & BASE（LP コンテンツのみ。header/footer は対象外）
+================================================================ */
+:where(#lp, #lp *),
+:where(#lp *::before, #lp *::after) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* common.css の要素セレクタを上書き */
+#lp h1, #lp h2, #lp h3, #lp h4, #lp ul, #lp li, #lp ol {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+#lp p {
+  text-indent: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0D1B2A;
+}
+
+/* ================================================================
+   カラー変数
+================================================================ */
+:root {
+  --bg:       #0D1B2A;  /* ディープネイビー */
+  --bg-sub:   #1C2B3A;  /* チャコール */
+  --text:     #F0EDE8;  /* オフホワイト */
+  --gold:     #B89A6A;  /* ゴールド */
+  --sub-text: #8A9BB0;  /* ライトグレー */
+  --border:   rgba(184, 154, 106, 0.18);
+}
+
+/* ================================================================
+   LP ラッパー
+================================================================ */
+#lp {
+  font-family: 'Noto Serif JP', 'Sawarabi Mincho', Georgia, serif;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  padding-top: 53px; /* SP: ヘッダー高さ分オフセット */
+}
+@media (min-width: 769px) {
+  #lp {
+    padding-top: 148px;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 53px;
+}
+@media (min-width: 769px) {
+  section[id] {
+    scroll-margin-top: 148px;
+  }
+}
+
+/* ================================================================
+   REVEAL ANIMATION
+================================================================ */
+.reveal {
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.in-view {
+  opacity: 1;
+}
+.reveal.d1 { transition-delay: 0.2s; }
+.reveal.d2 { transition-delay: 0.4s; }
+.reveal.d3 { transition-delay: 0.6s; }
+.reveal.d4 { transition-delay: 0.8s; }
+
+/* ================================================================
+   SHARED COMPONENTS
+================================================================ */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-pad {
+  padding: 120px 0 140px;
+}
+
+.section-sub {
+  background-color: var(--bg-sub);
+}
+
+/* 英語ラベル */
+.en-label {
+  display: block;
+  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  font-weight: 400;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+/* セクションリード */
+.section-lead {
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 300;
+  line-height: 2.4;
+  letter-spacing: 0.1em;
+  color: var(--sub-text);
+  margin-bottom: 56px;
+}
+
+/* ゴールドライン */
+.gold-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--gold);
+  opacity: 0.5;
+  margin: 32px 0;
+}
+
+/* ================================================================
+   BUTTON
+================================================================ */
+.btn-gold {
+  display: inline-block;
+  padding: 20px 52px;
+  background-color: transparent;
+  color: var(--gold);
+  text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(12px, 1.4vw, 14px);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  border: 1px solid var(--gold);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.btn-gold:hover {
+  background-color: var(--gold);
+  color: var(--bg);
+}
+.btn-gold.btn-large {
+  padding: 24px 72px;
+  font-size: clamp(13px, 1.5vw, 15px);
+}
+
+/* プレースホルダー画像 */
+.img-placeholder {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.img-placeholder svg {
+  display: block;
+  width: 100%;
+}
+
+.img-placeholder-sm {
+  background-color: var(--bg-sub);
+  border: 1px solid var(--border);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+.img-placeholder-sm::after {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ================================================================
+   1. HERO
+================================================================ */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-label {
+  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  font-size: clamp(12px, 1.4vw, 14px);
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.hero-title {
+  font-size: clamp(28px, 5vw, 58px);
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.hero-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--gold);
+  opacity: 0.5;
+  margin: 40px auto;
+}
+
+.hero-date {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 200;
+  letter-spacing: 0.3em;
+  color: var(--sub-text);
+  margin-bottom: 48px;
+}
+
+/* 装飾ハンガーシルエット */
+.hero-deco {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.hero-deco svg {
+  width: min(60vw, 520px);
+  height: auto;
+  opacity: 0.18;
+}
+
+/* ================================================================
+   2. INTRO
+================================================================ */
+.intro {
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-text {
+  font-size: clamp(16px, 1.9vw, 20px);
+  font-weight: 300;
+  line-height: 2.6;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.intro-meta {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 200;
+  letter-spacing: 0.22em;
+  color: var(--sub-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.intro-meta .sep {
+  color: var(--border);
+}
+
+/* ================================================================
+   3. PRODUCT
+================================================================ */
+.product {
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-visual {
+  margin-bottom: 48px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-name {
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--text);
+}
+
+.product-price {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--sub-text);
+  margin-bottom: 8px;
+}
+
+/* ================================================================
+   4. FEATURES
+================================================================ */
+.features {
+  border-bottom: 1px solid var(--border);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background-color: var(--border);
+  border: 1px solid var(--border);
+}
+
+.feature-item {
+  background-color: var(--bg-sub);
+  padding: 48px 40px;
+}
+
+.feature-num {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.feature-body {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 300;
+  line-height: 2.2;
+  letter-spacing: 0.06em;
+  color: var(--sub-text);
+}
+
+/* ================================================================
+   5. GALLERY
+================================================================ */
+.gallery {
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* ================================================================
+   6. REVIEWS
+================================================================ */
+.reviews {
+  border-bottom: 1px solid var(--border);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.review-item {
+  padding: 40px;
+  border: 1px solid var(--border);
+}
+
+.review-body {
+  font-size: clamp(15px, 1.7vw, 18px);
+  font-weight: 300;
+  line-height: 2.4;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.review-meta {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 0.25em;
+  color: var(--sub-text);
+}
+
+/* ================================================================
+   7. FLOW
+================================================================ */
+.flow {
+  border-bottom: 1px solid var(--border);
+}
+
+.flow-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+.flow-item:last-child {
+  border-bottom: none;
+}
+
+.flow-num {
+  flex-shrink: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  opacity: 0.5;
+  line-height: 1;
+  width: 60px;
+  text-align: center;
+}
+
+.flow-title {
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.flow-body {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 300;
+  line-height: 2.2;
+  letter-spacing: 0.06em;
+  color: var(--sub-text);
+}
+
+/* ================================================================
+   8. CTA
+================================================================ */
+.cta {
+  text-align: center;
+  background-color: var(--bg-sub);
+}
+
+.cta-title {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.cta-date {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 200;
+  letter-spacing: 0.28em;
+  color: var(--sub-text);
+  margin-bottom: 48px;
+}
+
+/* ================================================================
+   RESPONSIVE — Tablet 〜860px
+================================================================ */
+@media (max-width: 860px) {
+  .container {
+    padding: 0 32px;
+  }
+  .section-pad {
+    padding: 80px 0 100px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================================================
+   RESPONSIVE — Mobile 〜560px
+================================================================ */
+@media (max-width: 560px) {
+  .container {
+    padding: 0 24px;
+  }
+  .section-pad {
+    padding: 64px 0 80px;
+  }
+  .hero {
+    min-height: 80vh;
+  }
+  .hero-title {
+    letter-spacing: 0.06em;
+  }
+  .intro-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .intro-meta .sep {
+    display: none;
+  }
+  .feature-item {
+    padding: 36px 24px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .review-item {
+    padding: 28px 24px;
+  }
+  .flow-item {
+    gap: 20px;
+  }
+  .flow-num {
+    width: 40px;
+    font-size: 24px;
+  }
+  .btn-gold {
+    display: block;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
