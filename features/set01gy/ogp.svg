@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1c1c"/>
+      <stop offset="50%" stop-color="#242424"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Thin accent lines -->
+  <line x1="96" y1="200" x2="1104" y2="200" stroke="#2e2e2e" stroke-width="1"/>
+  <line x1="96" y1="430" x2="1104" y2="430" stroke="#2e2e2e" stroke-width="1"/>
+
+  <!-- Brand label -->
+  <text
+    x="600" y="255"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="15"
+    fill="#666666"
+    text-anchor="middle"
+    letter-spacing="8"
+  >NAKATA HANGER</text>
+
+  <!-- Product name -->
+  <text
+    x="600" y="322"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="28"
+    fill="#e8e8e8"
+    text-anchor="middle"
+    letter-spacing="4"
+  >SET-01  &#12501;&#12455;&#12523;&#12488;&#12496;&#12540;  &#12464;&#12524;&#12540;</text>
+
+  <!-- Tagline -->
+  <text
+    x="600" y="385"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="20"
+    fill="#888888"
+    text-anchor="middle"
+    letter-spacing="3"
+  >&#26032;&#12375;&#12356;&#26397;&#12289;&#25972;&#12387;&#12383;&#12463;&#12525;&#12540;&#12476;&#12483;&#12488;&#12363;&#12425;&#12290;</text>
+
+  <!-- Sub label -->
+  <text
+    x="600" y="476"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    fill="#444444"
+    text-anchor="middle"
+    letter-spacing="6"
+  >5&#26412;&#12475;&#12483;&#12488;</text>
+
+</svg>

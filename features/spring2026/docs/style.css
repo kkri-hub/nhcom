@@ -1,0 +1,2205 @@
+/* Google Fonts loaded via <link> in index.php */
+/* Reset handled by common.css */
+
+:root {
+  /* ===== Spring Gift Color Palette ===== */
+  /* Primary Colors */
+  --sakura-pink: #FFB7C5;
+  --warm-beige: #F5EFE7;
+  --soft-gold: #D4AF37;
+
+  /* Legacy (kept for compatibility) */
+  --gold: #D4AF37;
+  --gold-light: #E5C158;
+  --gold-pale: #F7F0DF;
+
+  /* Text Colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #5A5A5A;
+  --text-light: #8B8B8B;
+  --text: #1A1A1A;
+
+  /* Background */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FFF8F3;
+  --bg-accent: #FFF0F5;
+  --white: #FFFFFF;
+  --bg: #FFF8F3;
+  --border: #F0E6DC;
+
+  /* Spring Accents */
+  --spring-green: #A8D5BA;
+  --blossom-pink: #FFD6E8;
+
+  /* ===== Shadow System (Multi-layer) ===== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04),
+               0 1px 2px rgba(0, 0, 0, 0.06);
+
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08),
+               0 2px 4px rgba(0, 0, 0, 0.06);
+
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12),
+               0 4px 8px rgba(0, 0, 0, 0.08);
+
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.16),
+               0 8px 16px rgba(0, 0, 0, 0.12);
+
+  /* Legacy */
+  --shadow-soft: var(--shadow-sm);
+  --shadow-hover: var(--shadow-lg);
+
+  /* ===== Border Radius System ===== */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --radius: 16px;
+
+  /* ===== Spacing System (8px grid) ===== */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+#main {
+  font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', -apple-system, sans-serif;
+  font-size: 1.8rem; /* 18px - improved readability */
+  line-height: 1.8;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========== Hero ========== */
+
+.hub-hero {
+  text-align: center;
+  padding: 11.2rem 3.2rem 6.4rem;
+}
+
+.hub-hero .label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.36rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.4rem;
+}
+
+.hub-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 5vw, 5.12rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin-bottom: 1.6rem;
+}
+
+.hub-hero .subtitle {
+  font-size: 1.44rem;
+  font-weight: 300;
+  color: var(--text-light);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Hero Nav */
+
+.hub-nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-size: 1.28rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ========== Shared: Gold Line ========== */
+
+.gold-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 3.2rem auto;
+}
+
+/* ========== Shared: Section ========== */
+
+.section {
+  padding: 8rem 3.2rem;
+}
+
+.section:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.section:nth-child(odd) {
+  background: var(--bg-primary);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.section-head .label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.28rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.92rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.92rem, 3vw, 2.56rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.section-head .subtitle.small {
+  font-size: 1.36rem;
+  font-weight: 300;
+  color: var(--text-light);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ========== Grid ========== */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* ========== Scene Cards ========== */
+
+.scene-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  padding: 4rem 3.2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.scene-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.scene-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 8px 32px rgba(184, 150, 90, 0.08);
+}
+
+.scene-card:hover::after {
+  width: 40px;
+}
+
+.scene-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.64rem;
+}
+
+.scene-ja {
+  font-size: 1.36rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+  margin-bottom: 1.92rem;
+}
+
+.scene-card h3 {
+  font-size: 1.44rem;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  margin-bottom: 2.4rem;
+}
+
+/* ========== Feature Cards ========== */
+
+.feature-card {
+  text-align: center;
+  padding: 4rem 2.4rem;
+}
+
+.feature-card .feat-icon {
+  font-size: 1.92rem;
+  display: block;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+
+.feature-card h3 {
+  font-size: 1.44rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.96rem;
+}
+
+.feature-card p {
+  font-size: 1.28rem;
+  font-weight: 300;
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+/* ========== Budget Cards ========== */
+
+.budget-card {
+  border: 1px solid var(--border);
+  background: var(--white);
+  padding: 4rem 3.2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.budget-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 8px 32px rgba(184, 150, 90, 0.08);
+}
+
+.budget-card.popular {
+  border-color: var(--gold);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.32rem 1.6rem;
+  white-space: nowrap;
+}
+
+.budget-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.28rem;
+}
+
+.budget-price {
+  font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+  font-size: 3.52rem;
+  font-weight: 500;
+  margin-bottom: 0.32rem;
+}
+
+.budget-price span {
+  font-size: 1.6rem;
+}
+
+.budget-tax {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  margin-bottom: 1.92rem;
+}
+
+.budget-desc {
+  font-size: 1.31rem;
+  font-weight: 300;
+  color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 2.88rem;
+}
+
+/* ========== Buttons ========== */
+
+.btn-outline {
+  display: inline-block;
+  padding: 1.28rem 3.52rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 1.28rem;
+  letter-spacing: 0.12em;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+/* ========== Center CTA ========== */
+
+.center-cta {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+/* ========== Footer (removed — now using common echoFooter) ========== */
+
+/* ========== Premium Refinements ========== */
+
+/* Hero — more breathing room, refined scale */
+.hub-hero {
+  padding: 14.4rem 3.2rem 7.2rem;
+}
+
+.hub-hero .label {
+  font-size: 1.25rem;
+  letter-spacing: 0.35em;
+  margin-bottom: 2.88rem;
+}
+
+.hub-hero h1 {
+  font-size: clamp(3.52rem, 5.5vw, 5.76rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.92rem;
+}
+
+.hub-hero .subtitle {
+  font-size: 1.41rem;
+  line-height: 2;
+}
+
+/* Gold line — thinner, wider */
+.gold-line {
+  width: 48px;
+  height: 0.5px;
+  background: var(--gold);
+  margin: 4rem auto;
+  opacity: 0.8;
+}
+
+/* Nav links — refined hover */
+.hub-nav {
+  gap: 4.48rem;
+  margin-top: 0.8rem;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+  padding-bottom: 0.48rem;
+  transition: color 0.35s ease, border-bottom-color 0.35s ease;
+}
+
+/* Sections — generous vertical rhythm */
+.section {
+  padding: 120px 3.2rem;
+}
+
+.section-head {
+  margin-bottom: 5.6rem;
+}
+
+.section-head .label {
+  font-size: 1.2rem;
+  letter-spacing: 0.35em;
+  margin-bottom: 2.24rem;
+}
+
+.section-head h2 {
+  font-size: clamp(2rem, 3vw, 2.72rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+}
+
+/* Grid — slightly wider gaps */
+.grid-3 {
+  gap: 2.88rem;
+  max-width: 940px;
+}
+
+/* Scene cards — rounded, softer hover */
+.scene-card {
+  border-radius: var(--radius);
+  padding: 4.48rem 3.2rem;
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.scene-card::after {
+  bottom: -1px;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.scene-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.scene-label {
+  font-size: 1.12rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.8rem;
+}
+
+.scene-ja {
+  font-size: 1.31rem;
+  letter-spacing: 0.18em;
+}
+
+.scene-card h3 {
+  font-size: 1.41rem;
+  line-height: 2.1;
+  font-weight: 400;
+}
+
+/* Feature cards — subtle background on hover */
+.feature-card {
+  padding: 4.48rem 2.4rem;
+  border-radius: var(--radius);
+  transition: background 0.35s ease;
+}
+
+.feature-card:hover {
+  background: var(--bg);
+}
+
+.feature-card .feat-icon {
+  font-size: 2.08rem;
+  margin-bottom: 1.92rem;
+  opacity: 0.85;
+}
+
+.feature-card h3 {
+  font-size: 1.41rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.12rem;
+}
+
+.feature-card p {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+
+/* Budget cards — rounded, refined hover */
+.budget-card {
+  border-radius: var(--radius);
+  padding: 4.48rem 3.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.budget-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.budget-card.popular {
+  border-color: var(--gold);
+  box-shadow: 0 2px 16px rgba(197, 160, 89, 0.1);
+}
+
+.budget-card.popular:hover {
+  box-shadow: 0 6px 28px rgba(197, 160, 89, 0.14);
+}
+
+/* Badge — rounded, refined */
+.badge {
+  top: -11px;
+  padding: 0.4rem 1.92rem;
+  font-size: 1.04rem;
+  letter-spacing: 0.18em;
+  border-radius: 2px;
+}
+
+.budget-label {
+  font-size: 1.15rem;
+  letter-spacing: 0.28em;
+}
+
+.budget-price {
+  font-size: 3.84rem;
+  font-weight: 300;
+  margin-bottom: 0.24rem;
+}
+
+.budget-price span {
+  font-size: 1.52rem;
+}
+
+.budget-desc {
+  font-size: 1.28rem;
+  line-height: 2;
+}
+
+/* Buttons — refined outline, subtle fill on hover */
+.btn-outline {
+  padding: 1.36rem 3.84rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.18);
+}
+
+/* Center CTA — more room */
+.center-cta {
+  margin-top: 5.6rem;
+}
+
+/* Footer — removed (common echoFooter) */
+
+/* ========== Responsive ========== */
+
+@media (max-width: 768px) {
+  .hub-hero {
+    padding: 9.6rem 2.4rem 5.6rem;
+  }
+
+  .hub-nav {
+    gap: 2.88rem;
+  }
+
+  .section {
+    padding: 6.4rem 2.4rem;
+  }
+
+  .section-head {
+    margin-bottom: 4rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 2.24rem;
+    max-width: 400px;
+  }
+
+  .scene-card,
+  .budget-card {
+    padding: 3.52rem 2.88rem;
+  }
+
+  .feature-card {
+    padding: 3.2rem 2.4rem;
+  }
+
+  footer {
+    padding: 4.8rem 2.4rem 4rem;
+  }
+}
+
+/* ========== V2 Polish ========== */
+
+/* 1) Hero — spring gradient with warmth */
+.hub-hero {
+  padding: 19.2rem var(--space-lg) 12.8rem;
+  background: linear-gradient(
+    135deg,
+    var(--bg-accent) 0%,
+    var(--bg-primary) 30%,
+    var(--warm-beige) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative gradient overlay */
+.hub-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 183, 197, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hub-hero h1 {
+  font-weight: 400;
+  font-size: clamp(3.84rem, 6vw, 6.08rem);
+  letter-spacing: 0.12em;
+  margin-bottom: 2.24rem;
+}
+
+.hub-hero .subtitle {
+  line-height: 2.2;
+  letter-spacing: 0.04em;
+}
+
+/* Gold line — delicate hairline */
+.gold-line {
+  width: 52px;
+  height: 0.5px;
+  opacity: 0.7;
+  margin: 4.48rem auto;
+}
+
+/* Nav — lighter, wider spacing */
+.hub-nav {
+  gap: 4.8rem;
+  margin-top: 1.28rem;
+}
+
+.nav-link {
+  font-size: 1.22rem;
+  letter-spacing: 0.14em;
+  color: var(--text-light);
+  border-bottom: 0.5px solid transparent;
+  transition: color 0.4s ease, border-bottom-color 0.4s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold);
+  border-bottom-color: rgba(197, 160, 89, 0.5);
+}
+
+/* 2) Section spacing — 96px (8px grid) for breathing room */
+.section {
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.section-head {
+  margin-bottom: 6.4rem;
+}
+
+.section-head .label {
+  font-size: 1.15rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 2.56rem;
+}
+
+.section-head h2 {
+  font-size: clamp(2.08rem, 3.2vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+.section-head .subtitle.small {
+  font-size: 1.34rem;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+/* 3) Grid — 26px gap, wider breakpoint */
+.grid-3 {
+  gap: 26px;
+  max-width: 960px;
+}
+
+/* 4) Cards — rounded, lift on hover with dynamic scale */
+
+/* Scene cards */
+.scene-card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.scene-card::after {
+  display: none;
+}
+
+.scene-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--sakura-pink);
+  box-shadow: var(--shadow-xl);
+}
+
+.scene-card:hover .card-image img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.scene-label {
+  font-size: 1.09rem;
+  letter-spacing: 0.32em;
+  margin-bottom: 0.96rem;
+}
+
+.scene-ja {
+  font-size: 1.28rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.24rem;
+}
+
+.scene-card h3 {
+  font-size: 1.38rem;
+  line-height: 2.2;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.88rem;
+}
+
+/* Feature cards */
+.feature-card {
+  border-radius: 18px;
+  padding: 4.8rem 2.88rem;
+  border: 1px solid transparent;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.feature-card:hover {
+  background: rgba(251, 250, 248, 0.8);
+  border-color: rgba(0, 0, 0, 0.04);
+}
+
+.feature-card .feat-icon {
+  font-size: 2.24rem;
+  margin-bottom: 2.24rem;
+  opacity: 0.75;
+}
+
+.feature-card h3 {
+  font-size: 1.38rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.28rem;
+}
+
+.feature-card p {
+  font-size: 1.22rem;
+  line-height: 2.1;
+}
+
+/* Budget cards */
+.budget-card {
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 4.8rem 3.52rem;
+  box-shadow: none;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.budget-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.budget-card.popular {
+  border-color: rgba(197, 160, 89, 0.4);
+  box-shadow: none;
+}
+
+.budget-card.popular:hover {
+  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 8px 30px rgba(197, 160, 89, 0.08);
+}
+
+/* 6) Badge — minimal, outlined */
+.badge {
+  top: -12px;
+  background: var(--white);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.32rem 1.76rem;
+  font-size: 0.99rem;
+  letter-spacing: 0.22em;
+  border-radius: 20px;
+}
+
+.budget-label {
+  font-size: 1.12rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.6rem;
+}
+
+.budget-price {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.budget-desc {
+  font-size: 1.25rem;
+  line-height: 2.1;
+  margin-bottom: 3.2rem;
+}
+
+/* 5) Buttons — pill shape, lift on hover with gradient */
+.btn-outline {
+  padding: var(--space-sm) var(--space-xl);
+  border: 1px solid var(--sakura-pink);
+  border-radius: var(--radius-full);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--sakura-pink);
+  background: transparent;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--soft-gold) 100%);
+  color: var(--white);
+  border-color: transparent;
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Center CTA */
+.center-cta {
+  margin-top: 6.4rem;
+}
+
+/* Footer — removed (common echoFooter) */
+
+.to-top:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* ========== V2 Responsive ========== */
+
+@media (max-width: 960px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hub-hero {
+    padding: 11.2rem 2.4rem 8rem;
+  }
+
+  .hub-hero h1 {
+    font-size: clamp(2.88rem, 6vw, 3.84rem);
+  }
+
+  .hub-nav {
+    gap: 2.56rem;
+  }
+
+  .section {
+    padding: 80px 2.4rem;
+  }
+
+  .section-head {
+    margin-bottom: 4.48rem;
+  }
+
+  .scene-card,
+  .budget-card {
+    padding: 3.84rem 3.2rem;
+    border-radius: 14px;
+  }
+
+  .feature-card {
+    padding: 3.52rem 2.4rem;
+    border-radius: 14px;
+  }
+
+  .btn-outline {
+    padding: 1.28rem 3.52rem;
+    font-size: 1.18rem;
+  }
+
+  footer {
+    padding: 5.6rem 2.4rem 4rem;
+  }
+}
+
+/* ========== Hero Background Image ========== */
+
+.hub-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 252, 250, 0.85) 0%,
+    rgba(255, 255, 255, 0.7) 40%,
+    rgba(251, 250, 248, 0.9) 100%
+  ),
+  url('images/hero.jpg') center center / cover no-repeat;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== Kadode Editorial ========== */
+
+/* Section heading — mincho for emotion */
+#kadode .section-head h2 {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: clamp(2.24rem, 3.5vw, 3.04rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 2.2;
+}
+
+#kadode .section-head .subtitle.small {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.38rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+/* Cards — borderless, left-aligned editorial */
+#kadode .scene-card {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  text-align: left;
+}
+
+#kadode .scene-card:hover {
+  transform: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#kadode .scene-card::after {
+  display: none;
+}
+
+/* Card image */
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2.56rem;
+  background: var(--bg);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0.92;
+}
+
+#kadode .scene-card:hover .card-image img {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* Labels — small, quiet */
+#kadode .scene-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.48rem;
+  opacity: 0.65;
+}
+
+#kadode .scene-ja {
+  font-size: 1.25rem;
+  letter-spacing: 0.22em;
+  color: var(--text-light);
+  margin-bottom: 1.28rem;
+}
+
+/* Copy — mincho, letter-like reading */
+#kadode .scene-card h3 {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: 1.76rem;
+  font-weight: 400;
+  line-height: 2.4;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin-top: 0.64rem;
+  margin-bottom: 2.56rem;
+}
+
+/* Button inside kadode — keep subtle */
+#kadode .btn-outline {
+  font-size: 1.18rem;
+  padding: 1.28rem 3.52rem;
+}
+
+/* ========== Kadode Editorial Responsive ========== */
+
+@media (max-width: 960px) {
+  #kadode .grid-3 {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  #kadode .scene-card h3 {
+    font-size: 1.6rem;
+    line-height: 2.2;
+  }
+
+  .card-image {
+    margin-bottom: 1.92rem;
+    border-radius: 6px;
+  }
+}
+
+/* ========== Feature Cards — balanced height ========== */
+
+#features .grid-3 {
+  align-items: start;
+}
+
+#features .feature-card {
+  padding: 4.8rem 2.56rem 3.84rem;
+}
+
+#features .feature-card p {
+  font-size: 1.18rem;
+  line-height: 2.2;
+}
+
+/* ========== V3 Typography Scale-Up ========== */
+/* 老舗ブランドの品格 — 芯のある読みやすいサイズ感 */
+
+#main {
+  font-size: 1.6rem;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* --- Hero --- */
+
+.hub-hero .label {
+  font-size: 1.44rem;
+  letter-spacing: 0.35em;
+  margin-bottom: 3.2rem;
+}
+
+.hub-hero h1 {
+  font-size: clamp(4.48rem, 6.5vw, 6.72rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.56rem;
+}
+
+.hub-hero .subtitle {
+  font-size: 1.68rem;
+  font-weight: 400;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  max-width: 540px;
+}
+
+.nav-link {
+  font-size: 1.41rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+}
+
+/* --- Section Headings --- */
+
+.section-head .label {
+  font-size: 1.36rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 2.88rem;
+}
+
+.section-head h2 {
+  font-size: clamp(2.56rem, 4vw, 3.52rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  margin-bottom: 1.6rem;
+}
+
+.section-head .subtitle.small {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.1;
+  letter-spacing: 0.05em;
+}
+
+/* --- Kadode Section (mincho overrides) --- */
+
+#kadode .section-head h2 {
+  font-size: clamp(2.72rem, 4.2vw, 3.84rem);
+  line-height: 2;
+}
+
+#kadode .section-head .subtitle.small {
+  font-size: 1.6rem;
+}
+
+#kadode .scene-label {
+  font-size: 1.36rem;
+  letter-spacing: 0.35em;
+  opacity: 0.7;
+  margin-bottom: 0.64rem;
+}
+
+#kadode .scene-ja {
+  font-size: 1.52rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.6rem;
+}
+
+#kadode .scene-card h3 {
+  font-size: 2.08rem;
+  line-height: 2.4;
+  letter-spacing: 0.06em;
+  margin-top: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+#kadode .btn-outline {
+  font-size: 1.41rem;
+  padding: 1.44rem 4.16rem;
+}
+
+/* --- Feature Cards --- */
+
+.feature-card .feat-icon {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.feature-card h3 {
+  font-size: 1.84rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.44rem;
+}
+
+.feature-card p,
+#features .feature-card p {
+  font-size: 1.47rem;
+  line-height: 2.2;
+}
+
+/* --- Budget Cards --- */
+
+.budget-label {
+  font-size: 1.36rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.6rem;
+}
+
+.budget-price {
+  font-size: 4.48rem;
+  margin-bottom: 0.32rem;
+}
+
+.budget-price span {
+  font-size: 1.76rem;
+}
+
+.budget-tax {
+  font-size: 1.31rem;
+  margin-bottom: 2.24rem;
+}
+
+.budget-desc {
+  font-size: 1.52rem;
+  line-height: 2.2;
+  margin-bottom: 3.52rem;
+}
+
+.badge {
+  font-size: 1.15rem;
+  letter-spacing: 0.22em;
+  padding: 0.4rem 2.08rem;
+}
+
+/* --- Buttons --- */
+
+.btn-outline {
+  font-size: 1.44rem;
+  padding: 1.6rem 4.48rem;
+  letter-spacing: 0.15em;
+}
+
+/* --- Footer — removed (common echoFooter) --- */
+
+/* --- Gold line — slightly wider for bigger type --- */
+
+.gold-line {
+  width: 56px;
+  margin: 4.8rem auto;
+}
+
+/* --- Center CTA — proportional spacing --- */
+
+.center-cta {
+  margin-top: 7.2rem;
+}
+
+/* ========== V3 Responsive ========== */
+
+@media (max-width: 960px) {
+  .grid-3 {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.52rem;
+  }
+
+  .hub-hero h1 {
+    font-size: clamp(3.2rem, 7vw, 4.48rem);
+    margin-bottom: 1.92rem;
+  }
+
+  .hub-hero .subtitle {
+    font-size: 1.52rem;
+  }
+
+  .hub-hero .label {
+    font-size: 1.31rem;
+  }
+
+  .nav-link {
+    font-size: 1.31rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(2.24rem, 5vw, 2.88rem);
+  }
+
+  #kadode .section-head h2 {
+    font-size: clamp(2.24rem, 5vw, 3.2rem);
+  }
+
+  #kadode .scene-card h3 {
+    font-size: 1.84rem;
+    line-height: 2.2;
+  }
+
+  .feature-card h3 {
+    font-size: 1.68rem;
+  }
+
+  .budget-price {
+    font-size: 3.84rem;
+  }
+
+  .btn-outline {
+    font-size: 1.36rem;
+    padding: 1.44rem 3.84rem;
+  }
+
+  footer {
+    font-size: 1.25rem;
+    padding: 6.4rem 2.4rem 4.8rem;
+  }
+}
+
+/* ========== NEW SECTIONS: Brand Experience Design ========== */
+
+/* --- Why Section --- */
+#why {
+  background: var(--white);
+}
+
+#why .section-head h2 {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: clamp(2.88rem, 4.5vw, 4.16rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+/* Why Section - 2 Column Layout with Image */
+.why-content-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.why-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+.why-text-content {
+  text-align: left;
+}
+
+.why-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-text {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.84rem;
+  font-weight: 400;
+  line-height: 2.6;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  margin: 3.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .why-content-with-image {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .why-text-content {
+    text-align: center;
+  }
+}
+
+/* --- Craft Section --- */
+#craft {
+  background: var(--bg);
+}
+
+#craft .section-head h2 {
+  font-size: clamp(2.56rem, 4vw, 3.52rem);
+}
+
+.craft-image-wrapper {
+  max-width: 800px;
+  margin: 0 auto 4.8rem;
+}
+
+.craft-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+.craft-content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.craft-text {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.76rem;
+  font-weight: 500;
+  line-height: 2.8;
+  letter-spacing: 0.08em;
+  color: #4a4a4a;
+}
+
+/* --- Scene Section (simplified from Kadode) --- */
+#scene {
+  background: var(--white);
+}
+
+#scene .section-head h2 {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: clamp(2.72rem, 4.2vw, 3.84rem);
+  line-height: 2;
+}
+
+#scene .scene-card {
+  cursor: default;
+}
+
+#scene .scene-card h3 {
+  font-size: 1.84rem;
+  line-height: 2.2;
+}
+
+/* Scene products */
+.scene-products {
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.scene-products-title {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+  margin-bottom: 1.6rem;
+}
+
+.scene-product {
+  display: flex;
+  align-items: center;
+  gap: 1.28rem;
+  padding: 1.12rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.scene-product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.scene-product:last-child {
+  border-bottom: none;
+}
+
+.scene-product:hover {
+  color: var(--soft-gold);
+}
+
+.scene-product-name {
+  flex: 1;
+  font-size: 1.36rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.scene-product-price {
+  font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+  font-size: 1.84rem;
+  font-weight: 500;
+  color: var(--soft-gold);
+  white-space: nowrap;
+  margin-left: 1.6rem;
+}
+
+/* Price card sub-products */
+.price-card .scene-products {
+  padding: 0 1.6rem 1.28rem;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.price-card .scene-products-title {
+  margin-bottom: 0.64rem;
+}
+
+.price-card .scene-product {
+  padding: 0.64rem 0;
+}
+
+.price-card .scene-product-img {
+  width: 36px;
+  height: 36px;
+}
+
+.price-card .scene-product-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.28rem;
+}
+
+.price-card .scene-product-price {
+  font-size: 1.52rem;
+}
+
+/* Remove buttons from scene cards */
+#scene .btn-outline {
+  display: none;
+}
+
+/* --- Engraving Section --- */
+#engraving {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sakura petals animation */
+.petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--sakura-pink);
+  border-radius: 50% 0 50% 50%;
+  opacity: 0;
+  animation: petalFall linear infinite;
+}
+
+.petal:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; width: 8px; height: 8px; }
+.petal:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; width: 6px; height: 6px; }
+.petal:nth-child(3) { left: 50%; animation-duration: 9s; animation-delay: 4s; }
+.petal:nth-child(4) { left: 70%; animation-duration: 11s; animation-delay: 1s; width: 7px; height: 7px; }
+.petal:nth-child(5) { left: 85%; animation-duration: 8.5s; animation-delay: 3s; width: 9px; height: 9px; }
+.petal:nth-child(6) { left: 45%; animation-duration: 12s; animation-delay: 5s; width: 6px; height: 6px; }
+
+@keyframes petalFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) rotate(0deg) translateX(0);
+  }
+  10% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.12;
+  }
+  90% {
+    opacity: 0.06;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100vh)) rotate(360deg) translateX(60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    animation: none;
+    display: none;
+  }
+}
+
+#engraving .section-head,
+#engraving .engraving-image-wrapper,
+#engraving .engraving-content {
+  position: relative;
+  z-index: 1;
+}
+
+#engraving .section-head h2 {
+  font-size: clamp(2.56rem, 4vw, 3.52rem);
+}
+
+.engraving-image-wrapper {
+  max-width: 520px;
+  margin: 0 auto 4.8rem;
+  position: relative;
+}
+
+.engraving-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--sakura-pink), var(--soft-gold));
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.engraving-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(183, 110, 121, 0.18), 0 12px 60px rgba(183, 110, 121, 0.12);
+  object-fit: cover;
+}
+
+.engraving-content {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.engraving-text {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.76rem;
+  font-weight: 400;
+  line-height: 2.8;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.engraving-link {
+  display: inline-block;
+  margin-top: 3.2rem;
+  font-size: 1.36rem;
+  letter-spacing: 0.1em;
+  color: var(--soft-gold);
+  text-decoration: none;
+  padding: 0.96rem 2.88rem;
+  border: 1px solid var(--soft-gold);
+  border-radius: var(--radius-full);
+  transition: all 0.3s ease;
+}
+
+.engraving-link:hover {
+  background: var(--soft-gold);
+  color: var(--white);
+}
+
+/* --- Price Section (redesigned from Budget) --- */
+#price {
+  background: var(--white);
+}
+
+.price-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: 0;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.price-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--sakura-pink);
+  box-shadow: var(--shadow-xl);
+}
+
+.price-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.price-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.price-card:hover .price-image img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.price-label {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.44rem;
+  letter-spacing: 0.18em;
+  color: var(--text);
+  margin: 1.92rem 0 1.28rem;
+  padding: 0 2.4rem;
+}
+
+.price-amount {
+  font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+  font-size: 2.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin-bottom: 0.96rem;
+  padding: 0 2.4rem;
+}
+
+.price-amount span {
+  font-size: 1.92rem;
+  margin-left: 0.32rem;
+}
+
+.price-desc {
+  font-size: 1.36rem;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  padding: 0 2.4rem;
+  margin-bottom: 1.28rem;
+  white-space: nowrap;
+}
+
+/* Price featured product */
+.price-featured {
+  display: block;
+  text-decoration: none;
+  margin: 0 1.6rem 1.6rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+  transition: box-shadow 0.3s ease;
+}
+
+.price-featured:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.price-featured img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.price-featured:hover img {
+  transform: scale(1.03);
+}
+
+.price-featured-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.28rem;
+  font-size: 1.28rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  background: var(--bg);
+}
+
+.price-featured-price {
+  font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+  font-size: 1.76rem;
+  font-weight: 500;
+  color: var(--soft-gold);
+  white-space: nowrap;
+  margin-left: 1.28rem;
+}
+
+/* --- Final CTA Section --- */
+#cta.section-cta {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(251, 250, 248, 0.95) 100%
+  );
+  padding: 180px 3.2rem;
+}
+
+.cta-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-heading {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 2;
+  margin-bottom: 3.2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: var(--space-md) var(--space-2xl);
+  background: linear-gradient(135deg, #e8a4b8 0%, #c9a96e 100%);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: var(--space-lg);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #e8a4b8 20%, #c9a96e 100%);
+  box-shadow: 0 4px 20px rgba(232, 164, 184, 0.35), 0 8px 40px rgba(201, 169, 110, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Hero adjustments for new design --- */
+.hub-hero h1 {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: clamp(4.8rem, 7vw, 7.68rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin-bottom: 2.88rem;
+}
+
+.hub-hero .subtitle {
+  font-size: 1.76rem;
+  font-weight: 400;
+  line-height: 2.4;
+  letter-spacing: 0.08em;
+  max-width: 560px;
+  margin: 0 auto 0 auto;
+}
+
+.hub-hero .btn-primary {
+  margin-top: 4.8rem;
+}
+
+.hub-hero .btn-outline {
+  margin-top: 4.8rem;
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.hub-hero .btn-outline:hover {
+  background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--soft-gold) 100%);
+  color: var(--white);
+  border-color: transparent;
+}
+
+/* --- Responsive for new sections --- */
+@media (max-width: 768px) {
+  .section {
+    padding: 100px 2.4rem;
+  }
+
+  #cta.section-cta {
+    padding: 120px 2.4rem;
+  }
+
+  .why-text,
+  .craft-text,
+  .engraving-text {
+    font-size: 1.6rem;
+    line-height: 2.4;
+  }
+
+  .cta-heading {
+    font-size: clamp(2.56rem, 6vw, 3.52rem);
+  }
+
+  .btn-primary {
+    padding: 1.6rem 4.48rem;
+    font-size: 1.36rem;
+  }
+
+  .price-card {
+    padding: 0;
+  }
+
+  .price-label {
+    padding: 2.4rem 2.4rem 0;
+    margin: 0 0 1.6rem;
+  }
+
+  .price-amount {
+    font-size: 3.2rem;
+    padding: 0 2.4rem;
+    margin-bottom: 1.28rem;
+  }
+
+  .price-desc {
+    padding: 0 2.4rem;
+    margin-bottom: 1.92rem;
+  }
+
+  .price-featured {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .price-featured-name {
+    padding: 1.28rem 2.4rem;
+  }
+
+  .price-card .scene-products {
+    padding: 0 2.4rem 2.4rem;
+  }
+}
+
+/* ========== Fade-in Animation (Enhanced) ========== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger animation for cards (with scale) */
+.scene-card,
+.price-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scene-card.is-visible,
+.price-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Add delay for staggered effect */
+.scene-card:nth-child(1).is-visible,
+.price-card:nth-child(1).is-visible {
+  transition-delay: 0.15s;
+}
+
+.scene-card:nth-child(2).is-visible,
+.price-card:nth-child(2).is-visible {
+  transition-delay: 0.3s;
+}
+
+.scene-card:nth-child(3).is-visible,
+.price-card:nth-child(3).is-visible {
+  transition-delay: 0.45s;
+}
+
+/* Image fade-in within cards */
+.card-image img,
+.price-image img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ========== Scene Reason ========== */
+.scene-reason {
+  font-family: 'Zen Old Mincho', 'Yu Mincho', serif;
+  font-size: 1.28rem;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-top: 1.28rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.75;
+}
+
+/* ========== Back to Top Button ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 4.8rem;
+  right: 2.4rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--soft-gold);
+  color: var(--white);
+  font-size: 1.92rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.back-to-top.is-visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ========== Scroll Indicator ========== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+/* ========== SP Price Accordion ========== */
+@media (max-width: 768px) {
+  .price-card .scene-products {
+    border-top: none;
+  }
+
+  .price-card .scene-products-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    padding: 1.6rem 0;
+    margin-bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.3s ease;
+  }
+
+  .price-card .scene-products-title::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--text-light);
+    border-bottom: 1.5px solid var(--text-light);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    margin-top: -2px;
+  }
+
+  .price-card .scene-products.is-open .scene-products-title::after {
+    transform: rotate(-135deg);
+    margin-top: 2px;
+  }
+
+  .price-card .scene-products-title:active {
+    color: var(--soft-gold);
+  }
+
+  .price-card .scene-products .scene-product {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border-bottom: none;
+    opacity: 0;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.3s ease,
+                padding 0.35s ease;
+  }
+
+  .price-card .scene-products.is-open .scene-product {
+    max-height: 100px;
+    padding: 1.28rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    opacity: 1;
+  }
+
+  .price-card .scene-products.is-open .scene-product:last-child {
+    border-bottom: none;
+  }
+
+  /* --- Fix 4: Larger tap targets for sub-products --- */
+  .price-card .scene-product-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+
+  .price-card .scene-product {
+    gap: 1.6rem;
+  }
+
+  .price-card .scene-product-name {
+    font-size: 1.31rem;
+    line-height: 1.5;
+  }
+
+  .price-card .scene-product-price {
+    font-size: 1.68rem;
+    margin-left: 0.96rem;
+  }
+
+  /* --- Fix 6: Featured product name stacking --- */
+  .price-featured-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.48rem;
+  }
+
+  .price-featured-price {
+    margin-left: 0;
+  }
+}
