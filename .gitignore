@@ -1,0 +1,20 @@
+# Backup files
+*.bk*
+*.bkf*
+*.BK*
+*.BKF*
+*.bak
+*.BAK
+*.nlf*
+*.20*
+*,bkf*
+*phpbk*
+
+# System
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+dist/
+.env
