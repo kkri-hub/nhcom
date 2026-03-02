@@ -71,7 +71,7 @@ if (file_exists($nhPath)) {
     <h1>春に、想いを贈る。</h1>
     <p class="subtitle">新しい門出に、ずっと寄り添う贈り物を。</p>
     <div class="gold-line"></div>
-    <a href="#scene" class="btn-outline">門出の一本を選ぶ</a>
+    <a href="#scene" class="btn-primary">門出の一本を選ぶ</a>
     <div class="scroll-indicator">
       <span></span>
     </div>
@@ -142,12 +142,12 @@ if (file_exists($nhPath)) {
         <p class="scene-reason">新しい習慣のはじまりに。</p>
         <div class="scene-products">
           <p class="scene-products-title">おすすめギフト</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=104968106" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=104968106" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/104968106.jpg?cmsp_timestamp=20190516140034" alt="メンズスーツハンガー GFT-05M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズスーツハンガー GFT-05M</span>
             <span class="scene-product-price">¥3,850</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=69751671" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=69751671" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/69751671.jpg?cmsp_timestamp=20190516131320" alt="レディススーツハンガー GFT-05S" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">レディススーツハンガー GFT-05S</span>
             <span class="scene-product-price">¥3,850</span>
@@ -162,12 +162,12 @@ if (file_exists($nhPath)) {
         <p class="scene-reason">最初の一着を、正しく迎えるために。</p>
         <div class="scene-products">
           <p class="scene-products-title">おすすめギフト</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=173741685" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=173741685" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/173741685.jpg?cmsp_timestamp=20230324161338" alt="メンズスーツハンガー GFT-101" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズスーツハンガー GFT-101</span>
             <span class="scene-product-price">¥5,500</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=173737988" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=173737988" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/173737988.jpg?cmsp_timestamp=20230324143617" alt="メンズハンガー 2種類セット GFT-112" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズハンガー 2種類セット GFT-112</span>
             <span class="scene-product-price">¥8,030</span>
@@ -182,12 +182,12 @@ if (file_exists($nhPath)) {
         <p class="scene-reason">これまでの時間に、敬意を込めて。</p>
         <div class="scene-products">
           <p class="scene-products-title">おすすめギフト</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=117401959" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=117401959" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/117401959.jpg?cmsp_timestamp=20260204104023" alt="メンズハンガー＆洋服ブラシセット GFT-02" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズハンガー＆洋服ブラシセット GFT-02</span>
             <span class="scene-product-price">¥24,200</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=69751665" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=69751665" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/69751665.jpg?cmsp_timestamp=20220401135604" alt="メンズハンガー 2種類セット GFT-03M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズハンガー 2種類セット GFT-03M</span>
             <span class="scene-product-price">¥13,750</span>
@@ -218,7 +218,7 @@ if (file_exists($nhPath)) {
     <div class="engraving-content">
       <p class="engraving-text">新しい門出を迎えるあの人へ、<br>名前を刻んだ一本を。</p>
       <p class="engraving-text">毎朝手に取るたび、<br>贈り主の想いが、そっと甦る。</p>
-      <a href="https://www.nakatahanger-shop.com/?pid=69751712" target="_blank" rel="noopener" class="engraving-link">刻印オプションについて詳しく &rsaquo;</a>
+      <a href="https://www.nakatahanger-shop.com/?pid=69751712" class="engraving-link">刻印オプションについて詳しく &rsaquo;</a>
     </div>
   </section>
 
@@ -234,23 +234,23 @@ if (file_exists($nhPath)) {
         <p class="price-label">ちょっとした感謝に</p>
         <p class="price-amount">¥3,000<span>〜5,000</span></p>
         <p class="price-desc">気軽に贈れる心のこもった一本</p>
-        <a href="https://www.nakatahanger-shop.com/?pid=69751671" target="_blank" rel="noopener" class="price-featured">
+        <a href="https://www.nakatahanger-shop.com/?pid=69751671" class="price-featured">
           <img src="https://img17.shop-pro.jp/PA01267/924/product/69751671.jpg?cmsp_timestamp=20190516131320" alt="レディススーツハンガー GFT-05S" loading="lazy" decoding="async">
           <span class="price-featured-name">レディススーツハンガー GFT-05S<span class="price-featured-price">¥3,850</span></span>
         </a>
         <div class="scene-products">
           <p class="scene-products-title">その他のおすすめ</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=69751689" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=69751689" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/69751689.jpg?cmsp_timestamp=20210601175513" alt="ストールハンガー" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">ストールハンガー</span>
             <span class="scene-product-price">¥3,300</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=104968106" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=104968106" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/104968106.jpg?cmsp_timestamp=20190516140034" alt="メンズスーツハンガー GFT-05M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズスーツハンガー GFT-05M</span>
             <span class="scene-product-price">¥3,850</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=173741685" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=173741685" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/173741685.jpg?cmsp_timestamp=20230324161338" alt="メンズスーツハンガー GFT-101" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズスーツハンガー GFT-101</span>
             <span class="scene-product-price">¥5,500</span>
@@ -261,23 +261,23 @@ if (file_exists($nhPath)) {
         <p class="price-label">大切な人へ</p>
         <p class="price-amount">¥5,000<span>〜10,000</span></p>
         <p class="price-desc">春の門出を祝う、定番ギフト</p>
-        <a href="https://www.nakatahanger-shop.com/?pid=105321434" target="_blank" rel="noopener" class="price-featured">
+        <a href="https://www.nakatahanger-shop.com/?pid=105321434" class="price-featured">
           <img src="https://img17.shop-pro.jp/PA01267/924/product/105321434.jpg?cmsp_timestamp=20161214111722" alt="メンズスーツハンガー AUT-05SM" loading="lazy" decoding="async">
           <span class="price-featured-name">メンズスーツハンガー AUT-05SM<span class="price-featured-price">¥6,050</span></span>
         </a>
         <div class="scene-products">
           <p class="scene-products-title">その他のおすすめ</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=109092272" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=109092272" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/109092272.jpg?cmsp_timestamp=20190516121545" alt="メンズジャケットハンガー AUT-05M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズジャケットハンガー AUT-05M</span>
             <span class="scene-product-price">¥6,050</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=106704067" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=106704067" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/106704067.jpg?cmsp_timestamp=20190516131121" alt="メンズ&レディスハンガー 2種類セット BRD-06A" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズ&レディスセット BRD-06A</span>
             <span class="scene-product-price">¥6,050</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=139831864" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=139831864" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/139831864.jpg?cmsp_timestamp=20190516131530" alt="メンズ&レディスハンガー 2種類セット GFT-06M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズ&レディスセット GFT-06M</span>
             <span class="scene-product-price">¥7,150</span>
@@ -288,23 +288,23 @@ if (file_exists($nhPath)) {
         <p class="price-label">特別な想いを込めて</p>
         <p class="price-amount">¥10,000<span>〜</span></p>
         <p class="price-desc">お世話になった方へ、上質な感謝</p>
-        <a href="https://www.nakatahanger-shop.com/?pid=166395582" target="_blank" rel="noopener" class="price-featured">
+        <a href="https://www.nakatahanger-shop.com/?pid=166395582" class="price-featured">
           <img src="https://img17.shop-pro.jp/PA01267/924/product/166395582.jpg?cmsp_timestamp=20240117143939" alt="富士山ハンガー RISE（赤富士）" loading="lazy" decoding="async">
           <span class="price-featured-name">富士山ハンガー「RISE」赤富士<span class="price-featured-price">¥22,000</span></span>
         </a>
         <div class="scene-products">
           <p class="scene-products-title">その他のおすすめ</p>
-          <a href="https://www.nakatahanger-shop.com/?pid=115356349" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=115356349" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/115356349.jpg?cmsp_timestamp=20190516130748" alt="メンズ&レディスハンガー 2種類セット AUT-05MG" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズ&レディスセット AUT-05MG</span>
             <span class="scene-product-price">¥11,550</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=69751665" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=69751665" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/69751665.jpg?cmsp_timestamp=20220401135604" alt="メンズハンガー 2種類セット GFT-03M" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズハンガー 2種類セット GFT-03M</span>
             <span class="scene-product-price">¥13,750</span>
           </a>
-          <a href="https://www.nakatahanger-shop.com/?pid=117401959" target="_blank" rel="noopener" class="scene-product">
+          <a href="https://www.nakatahanger-shop.com/?pid=117401959" class="scene-product">
             <img src="https://img17.shop-pro.jp/PA01267/924/product/117401959.jpg?cmsp_timestamp=20260204104023" alt="メンズハンガー＆洋服ブラシセット GFT-02" class="scene-product-img" loading="lazy" decoding="async">
             <span class="scene-product-name">メンズハンガー&ブラシセット GFT-02</span>
             <span class="scene-product-price">¥24,200</span>
@@ -319,7 +319,7 @@ if (file_exists($nhPath)) {
     <div class="cta-content">
       <h2 class="cta-heading">この春、大切な人へ。<br>想いが届く贈り物を。</h2>
       <div class="gold-line"></div>
-      <a href="https://www.nakatahanger.com/products/category/gift" target="_blank" rel="noopener" class="btn-primary">門出の一本を選ぶ</a>
+      <a href="https://www.nakatahanger.com/products/category/gift" class="btn-primary">門出の一本を選ぶ</a>
     </div>
   </section>
 
