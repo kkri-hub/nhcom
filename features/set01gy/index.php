@@ -357,12 +357,12 @@
 
 
   <!-- ============================================================
-       EMPATHY — 新生活
+       EMPATHY 新生活
   ============================================================ -->
   <section id="empathy" class="s-empathy">
     <div class="s-empathy-inner">
 
-      <span class="scene-tag reveal">— 新生活</span>
+      <span class="scene-tag reveal">新生活</span>
       <div class="hline reveal d1"></div>
 
       <h2 class="empathy-h2 reveal d2">着替えても、クローゼットはそのままだった。</h2>
