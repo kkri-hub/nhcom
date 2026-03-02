@@ -10,6 +10,9 @@
 *,bkf*
 *phpbk*
 
+# Secrets
+include/const-before-text.php
+
 # System
 .DS_Store
 Thumbs.db
