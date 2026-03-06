@@ -11,9 +11,9 @@
   <meta property="og:description" content="新しい朝、整ったクローゼットから。引越し・転職・進学。環境が変わるとき、最初に整えるのは背景です。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.nakatahanger.com/features/set01gy/">
-  <meta property="og:image" content="https://www.nakatahanger.com/features/set01gy/ogp.svg">
+  <meta property="og:image" content="https://www.nakatahanger.com/features/set01gy/ogp.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.nakatahanger.com/features/set01gy/ogp.svg">
+  <meta name="twitter:image" content="https://www.nakatahanger.com/features/set01gy/ogp.png">
   <link rel="canonical" href="https://www.nakatahanger.com/features/set01gy/">
   <meta name="theme-color" content="#2d3d35">
 
