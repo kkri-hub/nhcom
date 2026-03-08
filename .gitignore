@@ -13,6 +13,17 @@
 # Secrets
 include/const-before-text.php
 
+# ローカル環境用（本番からダウンロードしたアセット・PHPテスト用）
+common/
+lib/
+image/
+img/
+file/
+index-s.css
+index-l.css
+index-s.js
+index-l.js
+
 # System
 .DS_Store
 Thumbs.db
