@@ -1,3 +1,22 @@
+<?php
+// Production: load NAKATA HANGER common framework
+// Local: use stub functions for preview
+$nhPath = dirname(__DIR__, 2) . "/include/nh.php";
+if (file_exists($nhPath)) {
+  require_once($nhPath);
+  define('NH_LOCAL', false);
+} else {
+  define('NH_LOCAL', true);
+  define('LANG', 'ja');
+  define('LANG_JA', 'ja');
+  function echoHead($p) {}
+  function echoHeader() { echo '<div style="background:#333;color:#fff;padding:12px 20px;font-size:13px;text-align:center;">[ NAKATA HANGER Header - production only ]</div>'; }
+  function echoFooter() { echo '<div style="background:#333;color:#fff;padding:24px 20px;font-size:13px;text-align:center;">[ NAKATA HANGER Footer - production only ]</div>'; }
+  function echoLang() { echo 'ja'; }
+  function getNcParam() { return time(); }
+  function echoCorporateLink() {}
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,9 +25,9 @@
   <title>SET-01 新色フェルトバー（グレー）新登場！ | NAKATA HANGER</title>
 
   <!-- SEO / SNS -->
-  <meta name="description" content="新生活の最初に整える、クローゼットの背景。NAKATA HANGER SET-01 フェルトバー グレー（5本セット）。国内製造。">
+  <meta name="description" content="新生活の最初に整える、クローゼットの空間。NAKATA HANGER SET-01 フェルトバー グレー（5本セット）。">
   <meta property="og:title" content="NAKATA HANGER — SET-01 フェルトバー グレー（5本セット）">
-  <meta property="og:description" content="新しい朝、整ったクローゼットから。引越し・転職・進学。環境が変わるとき、最初に整えるのは背景です。">
+  <meta property="og:description" content="新しい朝、整ったクローゼットから。引越し・転職・進学。環境が変わるとき、最初に整えるのは空間です。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.nakatahanger.com/features/set01gy/">
   <meta property="og:image" content="https://www.nakatahanger.com/features/set01gy/ogp.png">
@@ -38,280 +57,12 @@
   <!-- LP CSS -->
   <link rel="stylesheet" href="lp.css">
 </head>
-<body lang="ja">
-
-  <!-- nh.js ヘッダー初期化 -->
-  <script> _.event.onLoad(function() { this.onLoad(768); }.bind(nh)); </script>
+<body lang="<?php echoLang(); ?>" ios="false">
+  <?php echoHeader(); ?>
 
   <!-- ============================================================
-       SITE HEADER
+       LP CONTENT
   ============================================================ -->
-  <div id="header-news"></div>
-  <header class="drawer" full-view="true" menu-opened="false" nh-gray-border="3" sp-search-opened="false">
-	<div class="logo-area" nh-gray-border="2">
-		<div class="icons left">
-			<div class="icon drawer-toggle"><div icon='menu'><span></span></div></div>
-		</div>
-		<div class="logo"><a href="https://www.nakatahanger.com/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 208.2" xml:space="preserve"><g><g><path class="st0" d="M213.3,97.8l-29.4-34.5v33.8h-10.4V42.5h5.2l28.6,33v-33h10.4v55.3H213.3z"/><path class="st0" d="M208.4,181.8v-24.6h-24.1v24.6h-10.7v-54.6h10.7v21.4h24.1v-21.4H219v54.6H208.4z"/></g><g><path class="st0" d="M380.8,97.6l-4.4-11.1h-20.8l-4.2,11.1h-12l24.2-55.3h4.7l24.4,55.3H380.8z M365.9,59l-7.3,20.1h14.6 L365.9,59z"/><path class="st0" d="M423.7,51.6v46H413v-46h-19.3V43h50.1v8.6H423.7z"/><path class="st0" d="M486.3,97.6l-4.4-11.1h-20.8l-4.2,11.1h-12l24.3-55.3h4.7l24.4,55.3H486.3z M471.5,59l-7.3,20.1h14.6 L471.5,59z"/></g><g><path class="st0" d="M410.7,136.8v12.8h19.7v8.2h-19.7v16.4h27.5v8.6H400v-54.6h38.2v8.6H410.7z"/><path class="st0" d="M486.3,182.8l-17.8-22.5c-1.8,0-4.3-0.1-7.5-0.3v22.7h-12.2v-54.5c0.7,0,3.2-0.1,7.7-0.3 c4.4-0.2,8-0.3,10.8-0.3c16.9,0,25.3,5.4,25.3,16.1c0,3.2-1.2,6.2-3.5,8.8c-2.3,2.7-5.3,4.5-8.8,5.6l19.7,24.5H486.3z M461,136.6 v15.2c2.2,0.1,3.9,0.2,5,0.2c4.9,0,8.6-0.6,10.9-1.7c2.3-1.1,3.4-3.4,3.4-6.7c0-2.7-1.2-4.6-3.7-5.6c-2.5-1.1-6.3-1.6-11.6-1.6 C463.8,136.4,462.4,136.5,461,136.6z"/></g><g><path class="st0" d="M389.4,132.6l-4.7,7.8c-1.3-1-3.4-2.1-6.1-3.1c-2.8-1-5.1-1.5-7.1-1.5c-6.2,0-11.1,1.8-14.7,5.5 c-3.6,3.6-5.4,8.5-5.4,14.7c0,5.8,1.8,10.5,5.3,14c3.5,3.5,8.3,5.2,14.4,5.2c4,0,7.3-0.9,9.9-2.8v-10.7h-8.7v-8.2h19.9v24.4 c-2.7,1.9-6.1,3.4-10.3,4.4c-4.2,1.1-8.4,1.6-12.6,1.6c-9.1,0-16.2-2.6-21.5-7.7c-5.3-5.1-8-11.9-8-20.3c0-8.4,2.9-15.3,8.7-20.6 c5.8-5.3,13.6-7.9,23.3-7.9C378.7,127.2,384.6,129,389.4,132.6z"/></g><g><path class="st0" d="M267.7,97.1L263.3,86h-20.8l-4.2,11.1h-12l24.2-55.3h4.7l24.4,55.3H267.7z M252.9,58.5l-7.3,20.1h14.6 L252.9,58.5z"/><path class="st0" d="M320.4,97.1l-16.9-23.3l-6.7,8.3v15h-10.7V42.5h10.7v26.1l20.6-26.1h12.2l-19,23.9l22.6,30.8H320.4z"/><path class="st0" d="M267.7,181.8l-4.4-11.1h-20.8l-4.2,11.1h-12l24.2-55.3h4.7l24.4,55.3H267.7z M252.9,143.2l-7.3,20.1h14.6 L252.9,143.2z"/><path class="st0" d="M325.9,182.5l-29.4-34.5v33.8h-10.4v-54.6h5.2l28.6,33v-33h10.4v55.3H325.9z"/></g><path class="st2" d="M64.7,56.3c0,0-8.5-0.9-10.5,2.5c-2,3.3-2.6,11-3.4,16.4C49.2,84.5,33.9,101,31.9,105c-2,4-25,36-29.2,51.8 c-1.9,6.9-3,19.6-2.6,24.9c0.4,5.3,2.1,13.2,9.5,19.3c5.8,4.8,9.2,6.5,17.2,7.1c28.5,2.1,33.7-12,35-22.1 c1.3-10.1-1.8-20.5-7.4-28.1c-2.7-3.6-8.2-11.5-7.6-16.1c0.6-3.9,4.2-17.1,16.9-37.4c1.9-3,6.1-10,9.8-6.4 c2.3,2.3,31.6,24.5,52.1,36.2c15.4,8.8,33.6,10.1,34.5,6.6c1.1-4.2-4.9-13.2-10-14.5c-3.3-0.9-21.9-8.6-31.9-14.6 c-9.9-6-18.1-16.3-20.3-18.3c-4.7-4.4-8.1-21.1-8.8-23.7c-0.7-2.7-1.6-9-5.6-10.3c-4-1.3-13.8-2.2-13.8-2.2s-0.7-10-0.7-12 c0-2,1.3-5.9,4-9.2c4.1-5,4.6-14.6,4.6-16.6c0-2,0.4-20.6-11.9-19.3c-6.8,0.7-7.8,3.6-9.7,5.8c-1.9,2.2-2.7,5.2-2.7,5.2l3.1,1.7 c0,0,4.7-9.1,10.7-8.9c3.4,0.1,5.2,5.4,6.1,10.1c0.9,4.6-0.2,11.5-0.8,14.1c-0.9,3.5-4.4,7.8-5.8,9.8c-1.3,2-1.5,3.3-1.5,6.6 C65.2,47.7,64.7,56.3,64.7,56.3z"/></g></svg></a></div>
-		<div class="icons right">
-			<div class="icon" onclick="nh.header.onClickSpSearch();"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><path d="M219.2,374c-85.4,0-154.8-69.5-154.8-154.8c0-85.4,69.5-154.8,154.8-154.8S374,133.8,374,219.2 C374,304.5,304.5,374,219.2,374z M219.2,81.5c-75.9,0-137.6,61.7-137.6,137.6s61.7,137.6,137.6,137.6s137.6-61.7,137.6-137.6 S295,81.5,219.2,81.5z"/><rect x="359.5" y="301" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -154.8808 373.9148)" width="28.8" height="145.9"/></g></svg></div>
-			<div class="icon"><a href="https://www.nakatahanger-shop.com/cart/#/basket"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><g><path d="M447.4,384.2H170.1c-8.5,0-15.8-5.8-17.7-14L82.5,74.5c-0.1-0.5-0.5-0.8-1-0.8H5.5V56.5h75.9c8.5,0,15.8,5.8,17.7,14 l69.9,295.7c0.1,0.4,0.5,0.8,1,0.8h277.3V384.2z"/><path d="M442.4,322.1H151.1v-17.2h291.3c0.5,0,0.9-0.3,1-0.8l33.9-138.4c0-0.1,0.1-0.5-0.2-0.8c-0.3-0.4-0.7-0.4-0.8-0.4h-366 v-17.2h366c5.6,0,10.8,2.5,14.3,7c3.5,4.4,4.7,10.1,3.4,15.6l-33.9,138.4C458.1,316.4,450.8,322.1,442.4,322.1z"/></g><circle cx="211.4" cy="420" r="23.5"/><circle cx="399.4" cy="420" r="23.5"/></g></svg></a></div>
-		</div>
-	</div>
-	<div class="search-area" device="sp" nh-content-sp="padding" nh-gray-border="2">
-		<form action="https://www.nakatahanger.com/products/search.php" method="get" onsubmit="return nh.header.onSubmitSearch(this);">
-			<input type="text" name="word" onblur="nh.header.onBlurSpSearch(this);">
-			<input type="submit" value="検索" nh-gray-border="4">
-		</form>
-	</div>
-	<nav class="menus drawer-nav" ontransitionend="nh.header.onDrawerTransitionEnd();">
-		<div class="menu-container">
-			<div class="main-menu">
-				<ul>
-					<li class="main-list left has-submenu" item="products" nh-gray-border="3" onmouseenter="nh.header.setPcThisSubmenuHeight(this);">
-						<div class="main-item" opened="false" space="bottom" onclick="nh.header.onClickPlusMinus(this, false);">
-							<div class="text" nh-gray-bg-ba="4">商品</div>
-							<div class="icon"><div icon="plus-minus"><span class="minus" ></span><span class="plus" ></span></div></div>
-						</div>
-						<div class="submenu" closed-menu ontransitionend="nh.header.onMenuOpenCloseTransitionEnd();" features="true">
-							<div class="submenu-container" nh-gray-border="2-l">
-								<div class="main-area">
-									<div class="top-area" selected="men" nh-red-bg-before>
-										<div class="group" men-women="men">
-											<div class="group-container">
-												<div class="title" nh-gray-border="3" onclick="nh.header.onClickMenWomen(event);">
-													<div class="text" nh-font="1-s">Men</div>
-												</div>
-												<div class="list" space="top">
-													<ul>
-														<li><a href="https://www.nakatahanger.com/products/category/men">男性用商品一覧</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/men/jacket">ジャケットハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/men/shirt">シャツハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/men/bottom">ボトムハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/men/necktie-belt">ネクタイ / ベルトハンガー</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="group" men-women="women" nh-gray-border="3">
-											<div class="group-container">
-												<div class="title" nh-gray-border="3" onclick="nh.header.onClickMenWomen(event);">
-													<div class="text" nh-font="1-s">Women</div>
-												</div>
-												<div class="list" space="top">
-													<ul>
-														<li><a href="https://www.nakatahanger.com/products/category/women">女性用商品一覧</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/women/jacket">ジャケットハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/women/shirt">シャツハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/women/bottom">ボトムハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/women/stole-belt">ストール / ベルトハンガー</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="group has-closed-menu" item="others" nh-gray-border="3">
-											<div class="group-container">
-												<div class="title" opened="false" space="bottom" onclick="nh.header.onClickPlusMinus(this, true, true);">
-													<div class="text">その他</div>
-													<div class="icon"><div icon="plus-minus"><span class="minus" ></span><span class="plus" ></span></div></div>
-												</div>
-												<div class="list" closed-menu space="bottom" ontransitionend="nh.header.onMenuOpenCloseTransitionEnd();">
-													<ul nh-gray-border="2">
-														<li space="top"><a href="https://www.nakatahanger.com/products/category/others/brush-shoehorn">洋服ブラシ・靴べら</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/others/rack-stand">ハンガーラック・スタンド</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/others/kimono">和装ハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/others/kids">キッズハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/others/pet">ペットハンガー</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/others/outlet">アウトレット</a></li>
-														<li padding-space="bottom" lang="ja"><a href="https://www.nakatahanger.com/page/2996447">予約販売</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="group has-closed-menu" item="series" nh-gray-border="3">
-											<div class="group-container">
-												<div class="title" opened="false" space="bottom" onclick="nh.header.onClickPlusMinus(this, true, false);">
-													<div class="text">シリーズ別</div>
-													<div class="icon"><div icon="plus-minus"><span class="minus" ></span><span class="plus" ></span></div></div>
-												</div>
-												<div class="list" space="bottom" closed-menu ontransitionend="nh.header.onMenuOpenCloseTransitionEnd();">
-													<ul nh-gray-border="2">
-														<li space="top"><a href="https://www.nakatahanger.com/products/series/nh">NH</a></li>
-														<li><a href="https://www.nakatahanger.com/products/series/aut">Authentic</a></li>
-														<li><a href="https://www.nakatahanger.com/products/series/set">SET</a></li>
-														<li lang="en"><a href="https://www.nakatahanger.com/products/category/gift">Gift</a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="group-container" item="options">
-												<div class="title">
-													<div class="text">オプション</div>
-												</div>
-												<div class="list">
-													<ul>
-														<li><a href="https://www.nakatahanger-shop.com/?pid=69751712">ネーム入れ</a></li>
-														<li><a href="https://www.nakatahanger-shop.com/?pid=143768508">ロゴ入れ</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="bottom-area"></div>
-								</div>
-								<div class='features'><div class='feature'><div class='feature-container'><a href='https://www.nakatahanger.com/furusato/'><div class='image' border='true'><img nh-gray-border='3' src='https://www.nakatahanger.com/image/product-submenu-feature-furusato.jpg?nc=202601271545'></div><div class='text'>ふるさと納税<br>返礼品として NAKATA HANGER をお選び頂けます</div></a></div></div></div>
-							</div>
-						</div>
-					</li>
-					<li class="main-list left has-submenu" item="gift" nh-gray-border="3" space="bottom" onmouseenter="nh.header.setPcThisSubmenuHeight(this);">
-						<div class="main-item" opened="false" space="top-bottom" onclick="nh.header.onClickPlusMinus(this, false);">
-							<div class="text" nh-gray-bg-ba="4">ギフト</div>
-							<div class="icon"><div icon="plus-minus"><span class="minus" ></span><span class="plus" ></span></div></div>
-						</div>
-						<div class="submenu" features="true">
-							<div class="submenu-container" nh-gray-border="2-l">
-								<div class="left-area" nh-gray-border="3" closed-menu ontransitionend="nh.header.onMenuOpenCloseTransitionEnd();">
-									<div class="left-area-container">
-										<div class="main">
-											<div class="main-container">
-												<div class="title">Gift</div>
-												<div class="list">
-													<ul nh-gray-border="2">
-														<li space="top"><a href="https://www.nakatahanger.com/products/category/gift?link=menu_banner_gift">ギフト商品一覧</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/gift/men">男性に贈る</a></li>
-														<li><a href="https://www.nakatahanger.com/products/category/gift/women">女性に贈る</a></li>
-														<li space="bottom"><a href="https://www.nakatahanger.com/products/category/gift/pair">男女ペアで贈る</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class='features'><div class='feature'><div class='feature-container'><a href='https://www.nakatahanger-shop.com/?pid=69751712'><div class='image' border='true'><img nh-gray-border='3' src='https://www.nakatahanger.com/image/gift-submenu-feature-name-1.jpg?nc=202601271545'></div><div class='text'>ネーム入れ / レーザー刻印</div></a></div></div></div>
-									</div>
-								</div>
-								<div class="right-area" space="top-bottom" nh-gray-border="3">
-									<ul>
-										<li>
-											<a href="https://www.nakatahanger-bridal.jp/?link=menu_banner_bridal" target="_blank">
-												<div class="title">引出物 / 内祝い</div>
-												<div class="desc">NAKATA HANGER ブライダル<br><span class="smaller">※ 特設サイトに移動します</span></div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/bridal-1.jpg?nc=202601271545');"></div>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.nakatahanger.com/graduation?link=menu_banner_grad">
-												<div class="title">卒業記念品</div>
-												<div class="desc">令和7年度卒業記念</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/graduation-1.jpg?nc=202601271545');"></div>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.nakatahanger.com/organization/">
-												<div class="title">法人記念品・ノベルティ</div>
-												<div class="desc">法人記念品用にご検討されている企業様</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/organization-1.jpg?nc=202601271545');"></div>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="main-list left">
-						<div class="main-item">
-							<div class="text" nh-gray-bg-ba="4"><a href="https://www.nakatahanger.com/stores">ショールーム / 店舗</a></div>
-						</div>
-					</li>
-					<li class="main-list left">
-						<div class="main-item">
-							<div class="text" nh-gray-bg-ba="4"><a href="https://www.nakatahanger.com/news">お知らせ</a></div>
-						</div>
-					</li>
-					<li class="main-list right has-submenu" item="about" onmouseenter="nh.header.setPcThisSubmenuHeight(this);">
-						<div class="main-item" opened="false" onclick="nh.header.onClickPlusMinus(this, false);">
-							<div class="text" nh-gray-bg-ba="4">NAKATA HANGER とは</div>
-							<div class="icon"><div icon="plus-minus"><span class="minus" ></span><span class="plus" ></span></div></div>
-						</div>
-						<div class="submenu" features="true">
-							<div class="submenu-container" nh-gray-border="2-l">
-								<div closed-menu ontransitionend="nh.header.onMenuOpenCloseTransitionEnd();">
-									<div class="layout" nh-gray-border="2">
-										<div space="top">
-											<a href="https://www.nakatahanger.com/about">
-												<div class="title">NAKATA HANGER とは</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-about.jpg?nc=202601271545');"></div>
-											</a>
-											<a href="https://www.nakatahanger.com/about/craftsmanship.php">
-												<div class="title">ものづくり</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-craftsmanship.jpg?nc=202601271545');"></div>
-											</a>
-										</div>
-										<div>
-											<a href="https://www.nakatahanger.com/about/company.php">
-												<div class="title">企業情報</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-company.jpg?nc=202601271545');"></div>
-											</a>
-											<a href="https://www.nakatahanger.com/about/history.php">
-												<div class="title">会社の歴史</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-history.jpg?nc=202601271545');"></div>
-											</a>
-										</div>
-										<div padding-space="bottom">
-											<a href="https://www.nakatahanger.com/sdgs">
-												<div class="title">SDGs の取り組み</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-sdgs.jpg?nc=202601271545');"></div>
-											</a>
-											<a href="https://www.nakatahanger.com/about/#history">
-												<div class="title">ブランドヒストリー</div>
-												<div class="img" style="background-image:url('https://www.nakatahanger.com/image/menu-brand-history.jpg?nc=202601271545'); border:1px #afb0b1 solid"></div>
-											</a>
-										</div>
-										<div class='features-container' nh-gray-border='3'><div class='features'><div class='feature'><div class='feature-container'><a href='https://www.nakatakogei.com/'><div class='image' border='false'><img nh-gray-border='3' src='https://www.nakatahanger.com/image/corporate_image_logo.jpg?nc=202601271545'></div><div class='text'>コーポレート サイト</div></a></div></div></div></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="main-list right" item="howto" nh-gray-border="3" space="bottom">
-						<div class="main-item" space="bottom">
-							<div class="text" nh-gray-bg-ba="4"><a href="https://www.nakatahanger.com/howto">ハンガーの選び方</a></div>
-						</div>
-					</li>
-					<li class="main-list right" item="inquiry">
-						<div class="main-item">
-							<div class="icon" nh-gray-bg-ba="4"><a href="https://www.nakatahanger.com/inquiry"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><path d="M420,391.8H80c-10,0-18.2-8.2-18.2-18.2V126.4c0-10,8.2-18.2,18.2-18.2h340c10,0,18.2,8.2,18.2,18.2v247.2 C438.2,383.6,430.1,391.8,420,391.8z M80,125.4c-0.5,0-1,0.4-1,1v247.2c0,0.5,0.4,1,1,1h340c0.5,0,1-0.4,1-1V126.4c0-0.5-0.4-1-1-1 H80z"/><path d="M250,295.2c-3.4,0-6.8-0.9-9.7-2.8L65.8,181.6l9.2-14.5l174.5,110.7c0.3,0.2,0.7,0.2,1.1,0L425,167.1l9.2,14.5L259.7,292.4 C256.8,294.2,253.4,295.2,250,295.2z"/></g></svg></a></div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="secondary-menu">
-				<div class="content-area">
-					<ul>
-						<li class="secondary-list" item="search" focus="false">
-							<div class="container">
-								<form action="https://www.nakatahanger.com/products/search.php" method="get" onsubmit="return nh.header.onSubmitSearch(this);">
-									<input type="text" name="word" onblur="nh.header.onBlurPcSearch(this);">
-									<input type="submit" value="検索">
-								</form>
-								<div class="icon" onclick="nh.header.onClickPcSearch(this);"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><path d="M219.2,374c-85.4,0-154.8-69.5-154.8-154.8c0-85.4,69.5-154.8,154.8-154.8S374,133.8,374,219.2 C374,304.5,304.5,374,219.2,374z M219.2,81.5c-75.9,0-137.6,61.7-137.6,137.6s61.7,137.6,137.6,137.6s137.6-61.7,137.6-137.6 S295,81.5,219.2,81.5z"/><rect x="359.5" y="301" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -154.8808 373.9148)" width="28.8" height="145.9"/></g></svg></div>
-							</div>
-						</li>
-						<li class="secondary-list" item="account">
-							<div class="text"><a href="https://www.nakatahanger-shop.com/?mode=myaccount">マイページ</a></div>
-							<div class="icon"><a href="https://www.nakatahanger-shop.com/?mode=myaccount"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><path d="M250,260.8c-55.7,0-101.1-45.3-101.1-101.1S194.3,58.7,250,58.7S351.1,104,351.1,159.7S305.7,260.8,250,260.8z M250,75.9 c-46.2,0-83.9,37.6-83.9,83.9s37.6,83.9,83.9,83.9s83.9-37.6,83.9-83.9S296.2,75.9,250,75.9z"/><path d="M410.6,441.3h-17.2c0-99.6-64.3-180.6-143.4-180.6s-143.4,81-143.4,180.6H89.4c0-52.5,16.5-101.9,46.4-139.1 c30.4-37.8,70.9-58.6,114.2-58.6s83.8,20.8,114.2,58.6C394.1,339.4,410.6,388.9,410.6,441.3z"/></g></svg></a></div>
-						</li>
-						<li class="secondary-list" item="cart">
-							<div class="icon"><a href="https://www.nakatahanger-shop.com/cart/#/basket"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500"><g><g><path d="M447.4,384.2H170.1c-8.5,0-15.8-5.8-17.7-14L82.5,74.5c-0.1-0.5-0.5-0.8-1-0.8H5.5V56.5h75.9c8.5,0,15.8,5.8,17.7,14 l69.9,295.7c0.1,0.4,0.5,0.8,1,0.8h277.3V384.2z"/><path d="M442.4,322.1H151.1v-17.2h291.3c0.5,0,0.9-0.3,1-0.8l33.9-138.4c0-0.1,0.1-0.5-0.2-0.8c-0.3-0.4-0.7-0.4-0.8-0.4h-366 v-17.2h366c5.6,0,10.8,2.5,14.3,7c3.5,4.4,4.7,10.1,3.4,15.6l-33.9,138.4C458.1,316.4,450.8,322.1,442.4,322.1z"/></g><circle cx="211.4" cy="420" r="23.5"/><circle cx="399.4" cy="420" r="23.5"/></g></svg></a></div>
-						</li>
-						<li class="secondary-list">
-							<div class="text"><a href="https://www.nakatahanger.com/help">ご利用ガイド</a></div>
-						</li>
-						<li class="secondary-list" item="recruit"><div class="text"><a href="https://www.nakatahanger.com/recruit">採用情報</a></div></li>
-						<li class="secondary-list" item="lang"><div class="text"><a href="https://www.nakatahanger.com/en">ENGLISH</a></div></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-  </header>
 
   <main id="lp">
 

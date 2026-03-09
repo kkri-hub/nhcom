@@ -32,18 +32,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  padding-top: 53px; /* SP: ヘッダー高さ分オフセット */
+  margin-top: 103px; /* SP: header 53px + banner 50px */
 }
 @media (min-width: 769px) {
   #lp {
-    padding-top: 148px; /* PC: ヘッダー高さ分オフセット */
+    margin-top: 198px; /* PC: header 148px + banner 50px */
   }
 }
 
 /* ================================================================
    スクロールオフセット — 固定ヘッダー分を補正
-   SP: 53px (header)
-   PC: 148px (header)
+   SP: 103px (header 53px + banner 50px)
+   PC: 198px (header 148px + banner 50px)
 ================================================================ */
 section[id],
 nav[id] {

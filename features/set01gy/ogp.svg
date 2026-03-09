@@ -27,7 +27,7 @@
   <!-- Product name -->
   <text
     x="600" y="322"
-    font-family="Georgia, 'Times New Roman', serif"
+    font-family="Georgia, Meiryo, 'Noto Sans JP', serif"
     font-size="28"
     fill="#e8e8e8"
     text-anchor="middle"
@@ -37,7 +37,7 @@
   <!-- Tagline -->
   <text
     x="600" y="385"
-    font-family="Georgia, 'Times New Roman', serif"
+    font-family="Georgia, Meiryo, 'Noto Sans JP', serif"
     font-size="20"
     fill="#888888"
     text-anchor="middle"
@@ -47,7 +47,7 @@
   <!-- Sub label -->
   <text
     x="600" y="476"
-    font-family="Georgia, 'Times New Roman', serif"
+    font-family="Georgia, Meiryo, 'Noto Sans JP', serif"
     font-size="13"
     fill="#444444"
     text-anchor="middle"
